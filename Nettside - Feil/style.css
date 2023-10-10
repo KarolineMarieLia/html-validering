@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Rubik:wght@400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Nunito sans', sans-serif;
+}
+
+#front-page{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*grid-template-rows: auto auto auto;*/
+    grid-template-areas: "header header header"
+                        "main main main"
+                        "footer footer footer";
+}
+
+header{
+    grid-area: header;
+    height: fit-content;
+}
+
+nav{
+    overflow: auto;
+    background-color: white;
+    padding: 0rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: #193d19;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#main-menu {
+    display: flex;
+    padding: 1rem 2rem 1rem 2rem;
+    text-align: center;
+}
+
+#main-menu li {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    list-style: none;
+    font-size: 20px;
+    color: white;
+}
+
+#banner-image {
+    background-image: url("bilder/forside.jpg");
+    display: block;
+    width: 100%;
+    margin: 0;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#banner{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+#banner h1 {
+    font-size: 40px;
+}
+
+#banner p{
+    font-size: 20px;
+}
+
+main{
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    word-spacing: 2.5px;
+    line-height: 1.8;
+}
+
+#intro{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    margin: 3rem;
+    box-shadow: 5px 5px 15px rgb(220 220 220);
+}
+
+#intro h2 {
+    text-align: center;
+}
+
+#prosjekt-artikler {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2.5rem;
+}
+
+#prosjekt-artikler img {
+    width: 100%;
+}
+
+#prosjekt-artikler article{
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #F2F2F2;
+    box-shadow: 2px 2px 4px rgb(220 220 220);
+    flex-grow: 1;
+    flex-basis: 30%;
+}
